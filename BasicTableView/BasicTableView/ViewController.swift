@@ -14,9 +14,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    //Step 08: Create list of variables that we want to use.
-    var usersList: [String] = ["Lion", "Owl", "Fox", "Bear", "Gorilla", "Squirrel", "Wolf", "Deer", "Eagle", "Elephant", "Rabbit", "Raccoon", "Rhino", "Snake", "Tiger"]
-    var usersImage: [String] = ["lion", "owl", "fox", "bear", "gorilla", "squirrel", "wolf", "deer", "eagle", "elephant", "rabbit", "raccoon", "rhino", "snake", "tiger"]
+    //Step 08: Create an Array of Object! 
+    var usersList: [Animal] = [Animal(user:"Lion" , userImage:UIImage(named: "lion") ?? UIImage()),
+                               Animal(user:"Owl" , userImage:UIImage(named: "owl") ?? UIImage()),
+                               Animal(user:"Fox" , userImage:UIImage(named: "fox") ?? UIImage()),
+                               Animal(user:"Bear" , userImage:UIImage(named: "bear") ?? UIImage()),
+                               Animal(user:"Gorilla" , userImage:UIImage(named: "gorilla") ?? UIImage()),
+                               Animal(user:"Squirrel" , userImage:UIImage(named: "squirrel") ?? UIImage()),
+                               Animal(user:"Wolf" , userImage:UIImage(named: "wolf") ?? UIImage()),
+                               Animal(user:"Deer" , userImage:UIImage(named: "deer") ?? UIImage()),
+                               Animal(user:"Eagle" , userImage:UIImage(named: "eagle") ?? UIImage()),
+                               Animal(user:"Elephant" , userImage:UIImage(named: "elephant") ?? UIImage()),
+                               Animal(user:"Rabbit" , userImage:UIImage(named: "rabbit") ?? UIImage()),
+                               Animal(user:"Raccoon" , userImage:UIImage(named: "raccoon") ?? UIImage()),
+                               Animal(user:"Rhino" , userImage:UIImage(named: "rhino") ?? UIImage()),
+                               Animal(user:"Snake" , userImage:UIImage(named: "snake") ?? UIImage()),
+                               Animal(user:"Tiger" , userImage:UIImage(named: "tiger") ?? UIImage())]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +59,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Create cell with ".dequeueReusableCell" where identifier will be the one we created for the cell before on the XIB and the swift file.
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell
-        //This part of code is in charge of start the method "setupCell" we created before accessing the array of names.
-        cell?.setupCell(usersList[indexPath.row], usersImage: usersImage[indexPath.row])
+        //This part of code is in charge of start the method "setupCell" we created before accessing the array of object.
+        cell?.setupCell(usersList[indexPath.row])
         //Setting the return to show the cell we just made.
         return cell ?? UITableViewCell()
     }

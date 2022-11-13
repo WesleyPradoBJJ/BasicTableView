@@ -26,10 +26,10 @@ class CustomTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
     }
-    //Step 07: Create a func to get the userLabel.text info and show it on the screen. 
-    func setupCell(_ user: String, usersImage: String){
-        userLabel.text = user
-        userImageView.image = UIImage(named: usersImage)
+    //Step 07: Create a func to get the info from the array of object and show it on the screen. 
+    func setupCell(_ user: Animal){
+        userLabel.text = user.user
+        userImageView.image = user.userImage
     }
     
 }

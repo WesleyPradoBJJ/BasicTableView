@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="88" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="BasicTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zQN-gj-ebQ">
+                        <rect key="frame" x="30" y="7.3333333333333357" width="85" height="74.333333333333314"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="Vqr-CH-MC8"/>
+                            <constraint firstAttribute="height" constant="77" id="yNM-WY-KKQ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlp-XK-Dks">
+                        <rect key="frame" x="125" y="31" width="175" height="26.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <color key="textColor" systemColor="systemYellowColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zlp-XK-Dks" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CfS-kP-huL"/>
+                    <constraint firstAttribute="trailing" secondItem="zlp-XK-Dks" secondAttribute="trailing" constant="20" id="JA8-r1-iT6"/>
+                    <constraint firstItem="zQN-gj-ebQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="L3M-Ia-Tzo"/>
+                    <constraint firstItem="zlp-XK-Dks" firstAttribute="leading" secondItem="zQN-gj-ebQ" secondAttribute="trailing" constant="10" id="pQF-Xm-hOl"/>
+                    <constraint firstItem="zQN-gj-ebQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="sZB-gX-uTH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.020108722289276335" green="0.48054766414141414" blue="0.038608946055611784" alpha="0.79889279801324509" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="userImageView" destination="zQN-gj-ebQ" id="cf9-Is-A1U"/>
+                <outlet property="userLabel" destination="zlp-XK-Dks" id="byt-Wa-gyQ"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="4.2253521126760569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
